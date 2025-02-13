@@ -1,0 +1,30 @@
+{
+	"compilerOptions": {
+		"baseUrl": "./src",
+		"paths": {
+			"@assets/*": ["assets/*"],
+			"@components/*": ["components/*"],
+			"@hooks/*": ["hooks/*"],
+			"@pages/*": ["pages/*"],
+			"@store/*": ["store/*"],
+			"@utils/*": ["utils/*"],
+			"@appTypes/*": ["types/*"],
+			"@constants/*": ["constants/*"]
+		},
+		"target": "ES5",
+		"lib": ["dom", "es2015"],
+		"jsx": "react-jsx",
+		"moduleResolution": "node",
+		"strict": true,
+		"esModuleInterop": true,
+		"skipLibCheck": true,
+		"forceConsistentCasingInFileNames": true,
+		"outDir": "./dist",
+		"allowJs": true,
+		"checkJs": true,
+		"module": "ESNext",
+		"resolveJsonModule": true,
+	},
+	"include": ["src/**/*", "declarations.d.ts"],
+	"exclude": ["node_modules"]
+}
