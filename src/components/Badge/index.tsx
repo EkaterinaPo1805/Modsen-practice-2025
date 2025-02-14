@@ -1,4 +1,3 @@
-import { BADGES } from '@constants/badge';
 import { TaskBadge } from '@components/Badge/styled';
 import { Badge } from '@appTypes/badge';
 import { ThemeProvider } from 'styled-components';

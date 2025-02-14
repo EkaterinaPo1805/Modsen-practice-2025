@@ -16,15 +16,13 @@ const Task: React.FC<Task> = ({ title, description, badge, column }) => {
 	return (
 		<ThemeProvider theme={theme}>
 			<TaskWrapper>
-				{badge ? <Badge badge={badge} color={color} /> : null}
-				{title ? (
-					<>
-						<TaskContent>
-							<TaskTitle>{title}</TaskTitle>
-							<TaskDescription>{description}</TaskDescription>
-						</TaskContent>
-					</>
-				) : null}
+				{badge && <Badge badge={badge} color={color} />}
+				{title && (
+					<TaskContent>
+						<TaskTitle>{title}</TaskTitle>
+						<TaskDescription>{description}</TaskDescription>
+					</TaskContent>
+				)}
 			</TaskWrapper>
 		</ThemeProvider>
 	);

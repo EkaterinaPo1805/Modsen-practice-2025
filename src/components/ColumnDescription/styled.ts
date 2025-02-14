@@ -1,5 +1,4 @@
 import { Badge } from '@appTypes/badge';
-import { ColumnDescription } from '@appTypes/columnDescription';
 import styled from 'styled-components';
 
 export const ColumnDesc = styled.div<{ color: Badge['color'] }>`

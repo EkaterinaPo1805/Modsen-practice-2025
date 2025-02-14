@@ -1,23 +1,23 @@
-import React, { useState } from 'react';
-import { initialTasks } from '@constants/initialTasks';
+import React from 'react';
 import Task from '@components/Task/index';
 import ColumnDescription from '@components/ColumnDescription';
 import { Board, ColumnContent, TaskList } from '@components/Column/styled';
 import { theme } from '@constants/theme';
 import { ThemeProvider } from 'styled-components';
 import { BADGES } from '@constants/badge';
+import useLoadTasks from '@hooks/useLoadTasks';
 
 const Column: React.FC = () => {
-	const [tasks, setTasks] = useState(initialTasks);
+	const tasks = useLoadTasks();
 
 	return (
 		<ThemeProvider theme={theme}>
 			<Board>
-				{Object.keys(tasks).map((column) => (
+				{Object.keys(tasks).map((column: Task['column']) => (
 					<ColumnContent key={column}>
-						<ColumnDescription column={column} badge={tasks[column as keyof typeof tasks].length}/>
+						<ColumnDescription column={column} badge={tasks[column].length}/>
 						<TaskList>
-							{tasks[column as keyof typeof tasks].map((task) => (
+							{tasks[column].map((task: Task) => (
 								<Task
 									key={task.id}
 									id={task.id}
@@ -28,8 +28,10 @@ const Column: React.FC = () => {
 								/>
 							))}
 							<Task
+								key={`new-task-${column}`} 
+								id={`new-task-${column}`} 
 								badge={BADGES.ADD_TASK}
-								column={column as keyof typeof tasks}
+								column={column}
 							/>
 						</TaskList>
 					</ColumnContent>

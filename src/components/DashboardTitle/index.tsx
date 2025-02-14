@@ -1,6 +1,5 @@
 import React from 'react';
 
-import PlusIcon from '@components/PlusIcon';
 import {
 	DashboardName,
 	DashboardTitleContent,

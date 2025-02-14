@@ -1,12 +1,13 @@
 import { Task } from '@appTypes/task';
 import { BADGES } from './badge';
+import { v4 as uuidv4 } from 'uuid';
 
 export const initialTasks: {
 	[key in 'To Do' | 'In Progress' | 'Done']: Task[];
 } = {
 	'To Do': [
 		{
-			id: '1',
+			id: uuidv4(),
 			title: 'UI/UX Design in the age of AI',
 			description:
 				'Lorem ipsum dolor sit amet, libre unst consectetur adispicing elit.',
@@ -14,7 +15,7 @@ export const initialTasks: {
 			column: 'To Do',
 		},
 		{
-			id: '2',
+			id: uuidv4(),
 			title: 'Blog Copywriting',
 			description:
 				'Lorem ipsum dolor sit amet, libre unst consectetur adispicing elit.',
@@ -23,7 +24,7 @@ export const initialTasks: {
 	],
 	'In Progress': [
 		{
-			id: '3',
+			id: uuidv4(),
 			title: 'User flow confirmation for finance app',
 			description:
 				'Lorem ipsum dolor sit amet, libre unst consectetur adispicing elit.',
@@ -31,7 +32,7 @@ export const initialTasks: {
 			column: 'In Progress',
 		},
 		{
-			id: '4',
+			id: uuidv4(),
 			title: 'Healthcare app wireframe flow 👩‍⚕️',
 			description:
 				'Lorem ipsum dolor sit amet, libre unst consectetur adispicing elit.',
@@ -41,7 +42,7 @@ export const initialTasks: {
 	],
 	Done: [
 		{
-			id: '5',
+			id: uuidv4(),
 			title: 'UI/UX Design in the age of AI',
 			description:
 				'Lorem ipsum dolor sit amet, libre unst consectetur adispicing elit.',
@@ -49,7 +50,7 @@ export const initialTasks: {
 			column: 'Done',
 		},
 		{
-			id: '6',
+			id: uuidv4(),
 			title: 'UI/UX Design in the age of AI',
 			description:
 				'Lorem ipsum dolor sit amet, libre unst consectetur adispicing elit.',
@@ -57,7 +58,7 @@ export const initialTasks: {
 			column: 'Done',
 		},
 		{
-			id: '7',
+			id: uuidv4(),
 			title: 'UI/UX Design in the age of AI',
 			description:
 				'Lorem ipsum dolor sit amet, libre unst consectetur adispicing elit.',
