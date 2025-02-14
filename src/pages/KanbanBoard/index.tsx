@@ -1,12 +1,12 @@
-import Column from '@components/Column';
 import DashboardTitle from '@components/DashboardTitle';
 import { KanbanPage } from './styled';
+import Board from '@components/Board';
 
 const KanbanBoard: React.FC = () => {
 	return (
 		<KanbanPage>
 			<DashboardTitle />
-			<Column />
+			<Board />
 		</KanbanPage>
 	);
 };

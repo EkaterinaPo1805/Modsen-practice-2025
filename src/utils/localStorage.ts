@@ -1,8 +1,8 @@
-import { Task } from '@appTypes/task';
+import { TaskCard } from '@appTypes/task';
 
 const TASKS_STORAGE_KEY = 'tasks';
 
-export const saveTasksToLocalStorage = (tasks: { [key: Task['column']]: Task[] }) => {
+export const saveTasksToLocalStorage = (tasks: { [key: TaskCard['column']]: TaskCard[] }) => {
 	localStorage.setItem(TASKS_STORAGE_KEY, JSON.stringify(tasks));
 };
 

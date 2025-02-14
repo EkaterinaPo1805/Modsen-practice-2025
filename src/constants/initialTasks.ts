@@ -1,9 +1,9 @@
-import { Task } from '@appTypes/task';
+import { TaskCard } from '@appTypes/task';
 import { BADGES } from './badge';
 import { v4 as uuidv4 } from 'uuid';
 
 export const initialTasks: {
-	[key in 'To Do' | 'In Progress' | 'Done']: Task[];
+	[key in 'To Do' | 'In Progress' | 'Done']: TaskCard[];
 } = {
 	'To Do': [
 		{

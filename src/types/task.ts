@@ -1,7 +1,7 @@
 import { Badge } from "@appTypes/badge";
 import { ColumnDescription } from "./columnDescription";
 
-export interface Task {
+export interface TaskCard {
     id: string;
     title?: string;
     description?: string;
