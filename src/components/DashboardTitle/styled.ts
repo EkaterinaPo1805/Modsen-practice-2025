@@ -12,6 +12,9 @@ export const DashboardTitleContent = styled.div`
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
+	position: sticky;
+	top: 0;
+	z-index: 10;
 	padding: ${({ theme }) => theme.spacing.double_extra_large};
 	background: ${({ theme }) => theme.colors.light_gray};
 `;

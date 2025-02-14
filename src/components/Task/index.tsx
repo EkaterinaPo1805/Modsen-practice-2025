@@ -1,4 +1,4 @@
-import { Task } from '@appTypes/task';
+import { TaskCard } from '@appTypes/task';
 import {
 	TaskWrapper,
 	TaskContent,
@@ -11,7 +11,7 @@ import { theme } from '@constants/theme';
 import useDefineColor from '@hooks/useDefineColor';
 import { BADGES } from '@constants/badge';
 
-const Task: React.FC<Task> = ({ title, description, badge, column }) => {
+const Task: React.FC<TaskCard> = ({ title, description, badge, column }) => {
 	const color = useDefineColor(badge ?? BADGES.OK, column);
 	return (
 		<ThemeProvider theme={theme}>

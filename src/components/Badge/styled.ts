@@ -1,10 +1,10 @@
 import { Badge } from '@appTypes/badge';
-import { Task } from '@appTypes/task';
+import { TaskCard } from '@appTypes/task';
 import { BADGES } from '@constants/badge';
 import styled from 'styled-components';
 
 export const TaskBadge = styled.div<{
-	badge: Task['badge'];
+	badge: TaskCard['badge'];
 	color: Badge['color'];
 }>`
 	border-radius: ${({ theme }) => theme.borderRadius.badge_radius};
